@@ -1,0 +1,37 @@
+﻿<Window x:Class="RasyPsow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RasyPsow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <GroupBox Header="Wybierz rozmiar psa" Margin="10,53,636,274">
+            <StackPanel>
+                <CheckBox x:Name="chBox_mały" Content="Mały" Checked="chBox_mały_Checked" Unchecked="chBox_mały_Checked"/>
+                <CheckBox x:Name="chBox_sredni" Content="Średni" Checked="chBox_sredni_Checked" Unchecked="chBox_sredni_Checked"/>
+                <CheckBox x:Name="chBox_duzy" Content="Duży" Checked="chBox_duzy_Checked" Unchecked="chBox_duzy_Checked"/>
+            </StackPanel>
+        </GroupBox>
+        <Label Content="Jaka rasa psa do Ciebie pasuje?" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Czy to będzię twój pierwszy pies?" Margin="10,176,561,150">
+            <StackPanel>
+                <RadioButton x:Name="rdoTak" Content="Tak" Checked="rdoTak_Checked"/>
+                <RadioButton x:Name="rdoNie" Content="Nie" Checked="rdoNie_Checked"/>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="btn_filtruj" Content="Filtruj" HorizontalAlignment="Left" Margin="212,80,0,0" VerticalAlignment="Top" Height="44" Width="140" Click="btn_filtruj_Click"/>
+        <Label Content="Proponowane rasy:" HorizontalAlignment="Left" Margin="455,199,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Potrzeba ruchu" Margin="10,291,621,36">
+            <StackPanel>
+                <RadioButton x:Name="rdoDuza" Content="duża" Checked="rdoDuza_Checked"/>
+                <RadioButton x:Name="rdoMala" Content="mała" Checked="rdoMala_Checked"/>
+            </StackPanel>
+        </GroupBox>
+        <ListBox x:Name="Result_list" Margin="455,255,49,36"/>
+        <TextBox x:Name="txt_wyszukaj" HorizontalAlignment="Left" Margin="631,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txt_wyszukaj_TextChanged"/>
+        <Label Content="Wyszukaj:" HorizontalAlignment="Left" Margin="631,199,0,0" VerticalAlignment="Top" FontSize="10"/>
+
+    </Grid>
+</Window>
